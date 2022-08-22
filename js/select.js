@@ -27,24 +27,35 @@ document.getElementById("calculate-btn").addEventListener("click", function () {
   let totalPlayerCost = selectedPlayer * perPlayerCost;
 
   let totalPlayerExpense = document.getElementById("player-expense");
+
   totalPlayerExpense.value = totalPlayerCost;
+  console.log(typeof totalPlayerCost);
 });
 
 document.getElementById("total-btn").addEventListener("click", function () {
-  let managerCost = document.getElementById("manager-cost").value;
-  //let managerCost = parseFloat(managerCostString);
-  let coachCost = document.getElementById("coach-cost").value;
-  let totalPlayerExpense = Number(
-    document.getElementById("player-expense").value
-  );
-  console.log(typeof managerCost);
-  console.log(coachCost);
-  console.log(typeof totalPlayerExpense);
-  const totalString =
-    parseFloat(managerCost) +
-    parseFloat(coachCost) +
-    parseFloat(totalPlayerExpense);
-  const total = parseFloat(totalString);
-  const totalAmount = document.getElementById("total-amount");
-  totalAmount.innerText = total;
+  let managerCostString = document.getElementById("manager-cost").value;
+
+  let managerCost = parseFloat(managerCostString);
+
+  let coachCostString = document.getElementById("coach-cost").value;
+
+  let coachCost = parseFloat(coachCostString);
+
+  let totalPlayerExpenseString =
+    document.getElementById("player-expense").value;
+
+  let totalPlayerExpense = parseFloat(totalPlayerExpenseString);
+  console.log(typeof managerCost, typeof coachCost, typeof totalPlayerExpense);
+  if (
+    typeof managerCost !== "number" &&
+    typeof coachCost !== "number" &&
+    typeof totalPlayerExpense !== "number"
+  ) {
+    alert("Please Enter Valid Number");
+  } else {
+    const totalString = managerCost + coachCost + totalPlayerExpense;
+    const total = totalString;
+    const totalAmount = document.getElementById("total-amount");
+    totalAmount.innerText = total;
+  }
 });
