@@ -8,12 +8,12 @@
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
 </head>
 <body>
-    <header class="bg-primary p-5 my-2 text-center text-white">
+    <header class="bg-primary p-4 my-2 text-center text-white">
         <h1 class="mt-5 p-3 ">Choose Your Unique Five</h1>
-        <p class="fw-semibold fs-5">You can Choose your favourite best players.Purchase your favourite players and calculate the expense including manager and coach expense.</p>
+        <p class="fw-semibold fs-5 mb-5">You can Choose your favourite best players.<br>Purchase your favourite players and calculate the expense including manager and coach expense.</p>
     </header>
 
-    <div class="container mt-5">
+    <section class="container mt-5">
         <div class="row">
             <div class="col-md-9">
                 <div class="row g-3 mt-2">
@@ -149,7 +149,7 @@
                         
                     </div>
                    
-                    <button id="calculate-btn" class="bg-info w-100 text-center text-white border border-info rounded p-1">Calculate</button>
+                    <button id="calculate-btn" class="bg-primary w-100 text-center text-white border border-primary rounded p-1 fs-6 fw-semibold">Calculate</button>
 
                     <div class=" d-flex mt-3">
                         <p class="mx-2"> Player Expense</p>
@@ -164,16 +164,23 @@
                         <input class="w-50 h-50" type="number" name="" id="coach-cost">
                     </div>
 
-                    <button id="total-btn" class="bg-info w-100 text-center text-white border border-info rounded p-1 mt-3"> Calculate Total</button>
+                    <button id="total-btn" class="bg-primary w-100 text-center text-white border border-primary rounded p-1 mt-3 fs-6 fw-semibold"> Calculate Total</button>
 
                     <div class="d-flex justify-content-between mx-3 my-3">
-                        <p>Total</p>
+                        <p class="fw-semibold">Total</p>
                         <p>$ <span id="total-amount">00</span></p>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+
+    <footer class="bg-primary text-center text-white mt-5 p-5">
+        <p>Copyright @ 2022 All Rights Reserved</p>
+
+    </footer>
+
+
 
     <script src="js/select.js"></script>
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"> -->
