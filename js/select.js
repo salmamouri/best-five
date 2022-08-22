@@ -58,6 +58,7 @@ document.getElementById("total-btn").addEventListener("click", function () {
     alert("Please Enter Valid Number");
   } else {
     const total = totalCost(managerCost, coachCost, totalPlayerExpense);
+
     const totalAmount = document.getElementById("total-amount");
     totalAmount.innerText = total;
   }
