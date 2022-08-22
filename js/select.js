@@ -32,6 +32,10 @@ document.getElementById("calculate-btn").addEventListener("click", function () {
   console.log(typeof totalPlayerCost);
 });
 
+function totalCost(firstV, secondV, thirdV) {
+  return firstV + secondV + thirdV;
+}
+
 document.getElementById("total-btn").addEventListener("click", function () {
   let managerCostString = document.getElementById("manager-cost").value;
 
@@ -53,8 +57,7 @@ document.getElementById("total-btn").addEventListener("click", function () {
   ) {
     alert("Please Enter Valid Number");
   } else {
-    const totalString = managerCost + coachCost + totalPlayerExpense;
-    const total = totalString;
+    const total = totalCost(managerCost, coachCost, totalPlayerExpense);
     const totalAmount = document.getElementById("total-amount");
     totalAmount.innerText = total;
   }
