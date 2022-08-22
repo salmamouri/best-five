@@ -17,4 +17,7 @@
    console.log('btn-6 pressed');
  });
 
+ const allBtn = document.querySelectorAll("button")
+
+ allBtn.forEach
     
